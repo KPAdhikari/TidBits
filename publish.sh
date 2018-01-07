@@ -30,8 +30,8 @@ git add -A .
 #git add -A .
 echo "running git status command.."
 git status
-git commit -am "Update"
-#git commit -am $commitMessage
+#git commit -am "Update"
+git commit -am commitMessage
 #git push origin master gh-pages
 git push origin master
 #git checkout master
