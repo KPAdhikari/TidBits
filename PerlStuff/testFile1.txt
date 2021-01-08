@@ -1,0 +1,14 @@
+These texts are all
+from 'testFile1.txt'.
+
+I wrote here
+whatever
+came to my mind while
+I was preparing
+
+for a text file in order
+to be used by
+a perl script that
+was meant as a test-script
+for file IO.
+<THE END>
