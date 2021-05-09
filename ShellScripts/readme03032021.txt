@@ -1,0 +1,1 @@
+At the moment, I couldn't get the hereDocument with 'cat' working to producing multiple outputfiles from inside a foreach loop.

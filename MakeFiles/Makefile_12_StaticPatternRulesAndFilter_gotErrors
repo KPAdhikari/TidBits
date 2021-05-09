@@ -1,0 +1,19 @@
+# Static Pattern Rules and Filter
+
+#While I introduce functions later on, I'll forshadow what you can do with them. The filter function can be used in Static pattern rules to match the correct files. In this example, I made up the .raw and .result extensions.
+
+obj_files = foo.result bar.o lose.o
+src_files = foo.raw bar.c lose.c
+
+all: $(obj_files)
+
+$(filter %.o,$(obj_files)): %.o: %.c
+	echo "target: $@ prereq: $<"
+$(filter %.result,$(obj_files)): %.result: %.raw
+	echo "target: $@ prereq: $<" 
+
+%.c %.raw:
+	touch $@
+
+clean:
+	rm -f $(src_files)

@@ -1,0 +1,14 @@
+
+	kpbpcp
+
+	EOF
+
+	#Above end pairs with the one after 'cat <<END' above, thus, it doesn't show up in the output file.
+
+	#end
+	#This 'end' pairs with the one for the 'foreach' loop.
+
+
+
+	#chmod u+x job_launchGSIMgppRecsis_.csh
+	#jsub job_sub_batch

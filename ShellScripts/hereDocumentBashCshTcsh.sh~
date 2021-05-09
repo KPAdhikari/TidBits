@@ -1,0 +1,7 @@
+#!/bin/csh
+##!/bin/bash
+# Works with bash and csh
+
+cat > fileFromHereDocumentTest.txt <<EOF
+data to be put in 'here-document' testtestfile
+EOF

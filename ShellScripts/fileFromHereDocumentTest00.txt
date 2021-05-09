@@ -1,0 +1,3 @@
+			data to be put in 'here-document' testtestfile
+		EOF
+end

@@ -1,0 +1,5 @@
+total 32
+-rw-r--r--  1 kpadhikari  staff  1511 Jan 29 02:11 fileCreatedWith_cat.txt
+-rw-r--r--  1 kpadhikari  staff  1530 Jan 30 01:48 fooBar.txt
+-rw-r--r--  1 kpadhikari  staff    19 Jan 30 01:47 test1.txt
+-rw-r--r--  1 kpadhikari  staff   268 Jan 30 18:44 test2.txt

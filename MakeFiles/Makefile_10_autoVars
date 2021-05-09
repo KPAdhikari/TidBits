@@ -1,0 +1,27 @@
+#https://makefiletutorial.com/
+#There are many automatic variables, but often only a few show up:
+#There are many automatic variables, but often only a few show up:
+#kp: Try 'make' first. Then try make' again. Then 'touch one' and try 'make'.
+#    Next 'touch two' and try 'make' and see the differences of outputs.
+# Then, 'make clean' to clean of the files one, two created by 'touch'. 
+#
+hey: one two
+    # Outputs "hey", since this is the first target
+	echo $@
+
+    # Outputs all prerequisites newer than the target
+	echo $?     "    <-- all prerequisites newer than the target."
+
+    # Outputs all prerequisites
+	echo $^      "    <-- all prerequistes."
+
+	touch hey
+
+one:
+	touch one
+
+two:
+	touch two
+
+clean:
+	rm -f hey one two

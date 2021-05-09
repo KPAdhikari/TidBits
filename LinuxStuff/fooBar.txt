@@ -1,0 +1,14 @@
+This file was created with the 'cat > fileCreatedWith_cat.txt' in the linux prompot. This command will allow you to create a new file and add the content right from the terminal. When you're done editing the file, you can press Ctrl+D and the file will be saved. 
+
+Please remember that 'cat' is short for concatenate, which literally means 'link things together in a chain or series'. When I do 'whatis cat' it says 
+
+ifarm1802.jlab.org> whatis cat
+cat (1)              - concatenate files and print on the standard output
+cat (1p)             - concatenate and print files
+ifarm1802.jlab.org> 
+
+And, the difference between the 'cat' and 'more' is that we can show everything in a single file or multiple files on the screen/terminal all at once if we use 'cat', however, we have to keep on hitting 'return/enter' if we use more i.e. it will only show first few lines of the first file after the 'more' command. This 'cat' command is called so perhaps in the context of displaying the contents of multiple files because when we do something like 'cat file1 file2 file3' etc, then the contents of each of these files are linked together and displayed all at once on the standard output. That's just my hunch. May be I am wrong. Here I am still typing all these words on the terminal after I executed 'cat > fileCreatedWith_cat.txt'. Now, I want to stop adding any content to this newly created file. So, I am hitting 'Ctrl+D' right after this plus one 'carriage return or Enter' to end this file with a newline.
+
+
+
+llllaaaa haaaaa

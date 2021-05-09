@@ -1,0 +1,28 @@
+#Fancy Rules
+#Static Pattern Rules
+
+#Make loves c compilation. And every time it expresses its love, things get confusing. Here's the syntax for a new type of rule called a static pattern:
+
+#targets ...: target-pattern: prereq-patterns ...
+#commands
+
+#The essence is that the given target is matched by the target-pattern (via a % wildcard). Whatever was matched is called the stem. The stem is then substituted into the prereq-pattern, to generate the target's prereqs.
+
+#A typical use case is to compile .c files into .o files. Here's the manual way:
+
+objects = foo.o bar.o all.o
+all: $(objects)
+
+# These files compile via implicit rules
+foo.o: foo.c
+bar.o: bar.c
+all.o: all.c
+
+all.c:
+	echo "int main() { return 0; }" > all.c
+
+%.c:
+	touch $@
+
+clean:
+	rm -f *.c *.o all
