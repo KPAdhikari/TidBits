@@ -1,0 +1,45 @@
+6/6/17:
+How to build and share the DC calibration Application:
+==================
+
+Right click on the project node and Select either “Properties” or “Set Configuration -> Customize” to open the Project Properties window.
+
+Select Sources under Categories on the left pane, upon which a new tab will open (as seen in the screenshots below) where we see Includes/Excludes button
+
+Selecting the “Run” on the left, choose the main class through the “Browse” button on the right. (For example, I chose org.jlab.dc_calibration.clients.App2)
+
+Right click on the Project node and click on the “Clean and Build” menu item, which will create a new folder dist inside project location (in my case DC_Calibration folder)
+
+In the dist folder there will be a newly built jar file “projectName.jar” and a ‘lib’ subfolder which will have copies of each of the lib/jar files that were included in the project (by doing right click on Libraries node of the project and selecting “Add JAR/Folder …”)
+
+
+Next we have two options in deployment:
+
+********The first option is to put the newly built jar file (projectName.jar) inside coatjava/lib/utils/ folder (in the same cotajava version that was used for the earlier mentioned libraries), and make a little bash script “dc-calibration” (see a copy of it below) inside the coatjava/bin/ folder. To run the program, we’ll simply do “./bin/dc-calibration” inside the coatjava folder.  (But, this may not be the best option for some cases such as ours where we produce some output files (saved images, written output text files for fit parameters etc, which are done in files and images subfolders inside the project)
+
+********The second (and better) option is:
+Create a new DC_calibration Folder
+Put the dist folder (which contains our jar file and the lib folder with external lib jars such as that for coatlibs*.jar, clasrec_dc.jar etc)  in it.
+Also create src/files, src/images folders inside  DC_calibration
+Now pack it and compress (zip) it using the following command:
+      tar -czvf DC_calibration.tar.gz  DC_calibration
+Which will create DC_calibration.tar.gz file. Share it to someone else. Ask him to unpack it with “tar -xzvf DC_calibration.tar.gz”
+Now run it from the command line as:
+      java -jar ../path/our.jar
+Or open the file browser and double click our.jar
+ 
+ 
+
+
+
+
+(
+kp: In case of my DC_calibration project, I had diferent types of files in various folders to exclude so I had to select the excludes as follows, with comma separating different file choices as follows (see my GIMP snapshot below as well):
+
+files/*, images/sec*, images/t*,
+
+On 6/6/17 I selected the following for exclusion:
+
+files/rec*, files/f*, files/p*, images/res*, images/t*, images/w*,org/jlab/clas12db/*, org/jlab/dc_calibration/*.java, org/jlab/dc_calibration/NTuple/*, org/jlab/dc_calibration/NTuple/client/*, org/jlab/dc_calibration/gemc/*, org/jlab/dc_monitoring/*
+
+)
