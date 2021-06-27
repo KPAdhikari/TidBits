@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9" fx:controller="javafx_todoapp.FXMLInsertPageController">
+   <children>
+      <Button fx:id="done_button" layoutX="275.0" layoutY="350.0" mnemonicParsing="false" onAction="#doneButtonAction" text="Done" />
+      <TextField fx:id="title_text" layoutX="75.0" layoutY="46.0" prefHeight="27.0" prefWidth="157.0" />
+      <TextField fx:id="location_text" layoutX="75.0" layoutY="82.0" prefHeight="27.0" prefWidth="157.0" />
+      <TextField fx:id="notes_text" layoutX="75.0" layoutY="119.0" prefHeight="132.0" prefWidth="157.0" />
+      <Label layoutX="23.0" layoutY="51.0" text="Title" />
+      <Label layoutX="15.0" layoutY="87.0" text="Location" />
+      <Label layoutX="23.0" layoutY="119.0" text="Notes" />
+      <DatePicker fx:id="date_picker" layoutX="366.0" layoutY="46.0" prefHeight="27.0" prefWidth="201.0" />
+      <Label layoutX="312.0" layoutY="51.0" text="Date" />
+      <MenuButton fx:id="hour_menubutton" layoutX="367.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="53.0" text="01">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="01" />
+          <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="02" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="03" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="04" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="05" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="06" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="07" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="08" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="09" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="10" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="11" />
+            <MenuItem mnemonicParsing="false" onAction="#hourMenuItemButtonAction" text="12" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="minute_menubutton" layoutX="440.0" layoutY="123.0" mnemonicParsing="false" text="00">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="00" />
+          <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="01" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="02" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="03" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="04" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="05" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="06" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="07" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="08" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="09" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="10" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="11" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="12" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="13" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="14" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="15" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="16" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="17" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="18" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="19" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="20" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="21" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="22" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="23" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="24" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="25" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="26" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="27" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="28" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="29" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="30" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="31" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="32" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="33" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="34" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="35" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="36" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="37" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="38" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="39" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="40" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="41" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="42" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="43" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="44" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="45" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="46" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="47" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="48" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="49" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="50" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="51" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="52" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="53" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="54" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="55" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="56" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="57" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="58" />
+            <MenuItem mnemonicParsing="false" onAction="#minuteMenuItemButtonAction" text="59" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="ampm_menubutton" layoutX="507.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" text="AM">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#ampmMenuItemButtonAction" text="AM" />
+          <MenuItem mnemonicParsing="false" onAction="#ampmMenuItemButtonAction" text="PM" />
+        </items>
+      </MenuButton>
+      <Label layoutX="367.0" layoutY="101.0" text="Hour" />
+      <Label layoutX="440.0" layoutY="101.0" text="Minutes" />
+      <Label layoutX="507.0" layoutY="101.0" text="AM/PM" />
+   </children>
+</AnchorPane>

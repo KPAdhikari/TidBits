@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="insertButton" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_todoapp.FXMLHomePageController">
+   <children>
+      <Label layoutX="121.0" layoutY="45.0" text="Home Page">
+         <font>
+            <Font size="66.0" />
+         </font>
+      </Label>
+      <Button fx:id="insert_button" layoutX="199.0" layoutY="163.0" mnemonicParsing="false" onAction="#insertButtonAction" prefHeight="27.0" prefWidth="203.0" text="Insert Tasks" />
+      <Button fx:id="view_button" layoutX="199.0" layoutY="214.0" mnemonicParsing="false" onAction="#viewButtonAction" prefHeight="27.0" prefWidth="203.0" text="View Tasks" />
+      <Label fx:id="task_label" layoutX="279.0" layoutY="329.0" />
+   </children>
+</AnchorPane>
