@@ -1,0 +1,533 @@
+#+TITLE: Emacs Mini Manual (PART 2) - LISP PRIMER: WHY PARENTHESES MATTER
+* Introduction - and why you should learn Lisp
+:PROPERTIES:
+:ID:       267fa5b6-b998-42c6-8ec0-382035284873
+:END:
+In this section, you can try out code by =M-x ielm=, then paste code
+into the Emacs Lisp interpreter. It's important that you understand
+the core ideas. After you finish the sub-sections of this section, we
+will play with Emacs Lisp code for customizing Emacs, and it's really
+fun to see your Emacs "evolves" gradually.
+
+** Before we start
+:PROPERTIES:
+:ID:       24b6798b-24de-45dc-94ce-cd2dddf55255
+:END:
+Please be aware that although I intentionally emphasize the importance
+of parentheses, but *I don't mean Lisp is all about parentheses*. I
+just want to clear beginner's confusion with parentheses.
+
+In this chapter, I will introduce to you why language like Lisp exists
+and what sets it from other languages, along with basic syntax and
+semantic. For deeper learning into Emacs Lisp, many tutorials exist
+and you can search easily on the internet. But before all of that, I
+want you to understand what and why Lisp differs from others, and why
+should you use Lisp; otherwise, it's just learning a different ways of
+doing things in a different language and won't motivate you to take
+Lisp serious because the mentality of "just another programming
+language".
+** A bit of history
+:PROPERTIES:
+:ID:       71c4974f-42b4-4a29-93bd-b823688ea024
+:END:
+Lisp has a long history. Lisp was designed by computer scientist [[http://en.wikipedia.org/wiki/John_McCarthy_%2528computer_scientist%2529][John
+McCarthy]]. Lisp first appeared in 1958 and Lisp is still with us up to
+this day with various dialects: Common Lisp, newLisp, Emacs Lisp, Racket,
+Clojure... Lisp is short for (*LIS*)t (*P*)rocessing.
+
+You can read the history of Lisp until 1979 of Lisp, written by John
+McCarthy, the creator of Lisp: [[http://www-formal.stanford.edu/jmc/history/lisp/lisp.html][History of Lisp]].
+
+Another good read about Lisp history, written by Paul Graham: [[http://www.paulgraham.com/lisphistory.html][Lisp
+History]].
+
+[[http://www.lispworks.com/success-stories/index.html][Success Stories]].
+
+** Basic syntax and semantic
+:PROPERTIES:
+:ID:       9a30dadd-d95e-49a9-8690-b6b633d9083d
+:END:
+Lisp syntax is inherently simple. At its core, this is all that
+required to understand any Lisp:
+
+- Anything is a list, it's an atom. Atoms are the same as primitives
+  in other languages: components that cannot be broken down further
+  into smaller pieces. This is data.
+
+- Anything is not an atom, it's a list that contains atoms. List is
+  just anything contained in a pair of parentheses. List can be used
+  either as code for processing something or as data to be processed.
+
+1. Data:
+
+   - Atomic-data, or *Atom*: It is the same as primitives in other
+     languages, meaning the most basic construct and indivisible. Atoms
+     include following basic types, you should try in IELM:
+
+     + *Number*: integer like 1, 2, 3... or floating point numbers like
+       1.5, 3.14...
+
+     + *String*: strings like "a", "string", "this is a string"... Is
+       also an atom. String is immutable.
+
+     + =NIL= or =()=: NIL means =null= in other languages. =()= means
+       empty list, which is equivalent to =NIL=. When using with a true
+       or false test, usch as an if statement, =NIL= or the empty list
+       =()= means the value =false=; all other non-empty values in Lisp
+       are true.
+
+     + *Symbol*: A symbol is an object with a name. You can think of
+       symbol as pointer or reference in other language. Each symbol
+       has 4 components:
+
+       * Print name: symbol's name as string
+
+       * Value: value of symbol as variable
+
+       * Function: symbol's function definition. A symbol can be both a
+         variable and a function
+
+       * Property-list: list of key-value pairs. You don't need to care
+         much at this stage.
+
+       Example: the variable =buffer-file-name= is both a variable and
+       a function. You can check by using =symbol-value= and
+       =symbol-function= functions:
+
+       #+begin_src emacs-lisp
+       (symbol-value 'buffer-file-name) ;; check the value of buffer-file-name; if you try it in IELM,
+       ;; the value is NIL because the buffer is not associated with any file
+
+       (symbol-function 'buffer-file-name) ;; return the function buffer-file-name; 
+       ;; IELM should display something like this: #<subr buffer-file-name>
+       #+end_src
+
+   - Non-atomic: There's a reason Lisp is called (*LIS*)t
+     (*P*)rocessing. In other languages, list is just another data
+     type; but in Lisp, because of Lisp syntax, list is really
+     special. Basically, this is a list:
+
+	 #+begin_src emacs-lisp
+       ’(...)
+     #+end_src
+
+     A list can hold data, both atomic and non-atomic. That means, a
+     list can hold a smaller list inside it along with atomic
+     data. List elements are separated by whitespace.
+
+2. Code: If you want to run code to be executed, here is the syntax:
+   #+begin_src emacs-lisp
+     (...)
+   #+end_src
+
+   What is the difference between code and data? That's right, a single
+   quote =’=. Without the quote =’=, we are creating *a list* that holds
+   code for computer to execute. With the quote =’=, we are creating *a
+   list* that holds data, similar to List data structure in Java or C++
+   to hold data.
+
+_Examples_:
+
+#+begin_src emacs-lisp
+  ’(1 2 3 4) ;;is a list that holds 4 numbers from 1 to 4
+
+  ’("aa" "bb" "cc" "dd") ;;is a list that holds 4 strings: "aa", "bb", "cc", "dd"
+
+   '() ;; an empty list, which is also an atom
+
+  ’(if a b c) ;;  a list that hold 4 symbol: if, a, b and c
+
+   (if a b c) ;; is an if expression that executes if..then..else
+             ;; logic in common programming languages. Expressions like if are
+             ;; called *special form*
+
+  ’(+ 1 2 3) ;; is a list consists of 4 elements: +, 1, 2 and 3
+
+   (+ 1 2 3)  ;; is a function call to function "+" (yes, "+" is a function)
+#+end_src
+
+Both code and data in Lisp can be represented using the same format: a
+pair of parentheses with items in it: =(...)=; and it is called a
+list. This peculiar property is called *homoiconicity*, and languages
+that have this property is called *homoiconic languages*. It makes
+Lisp so powerful: *code can be data, data can be code*. It is a reason
+why Lisp contains a lot of parentheses.
+
+Both code and data are represented as a list underlying, but to
+distinguish between list that holds data and list that holds code,
+list that holds data is referred simply as list; while list that holds
+code is *Lisp form*. But remember, code and data are lists, and
+because of the single representation for both code and data, list is
+more special in Lisp than in other languages.
+
+It's worth to repeat again:  =’(...)= for creating data and =(...)=
+for creating code; you hold things in =’(...)= and you process things
+in =(...)=. Easy to remember, right? 
+
+You may think: "Cool, so what difference can homoiconity make?" Let's
+look at an example; this is typical =if..then..else=:
+
+#+begin_src c
+  if (condition) {
+      ...statements...
+  } else {
+      ...statements...
+  }
+#+end_src
+
+How do you change its syntax? For example, you prefer Python
+=if..then..else= syntax, how can we change C =if..then..else= to
+Python =if...then...else= and write our customized version in C:
+
+#+begin_src python
+  if condition:
+      ...statements...
+  else:
+      ...statements...
+#+end_src
+
+The answer is, it's impossible, even with C macro. With Lisp, this
+is entirely possible, except one minor thing: the code must be
+treated as data, meaning the entire Python =if= construct above must
+be enclosed within a Lisp form like this:
+
+#+begin_src emacs-lisp
+  '(if condition:
+      ...statements
+    else:
+      ...statements...)
+#+end_src
+
+Lisp still has syntax, but minimal: a pair of parentheses, with things in
+in it: =(...)=, along with the syntax for primitives. For that reason,
+it can adapt to any type of syntax programmers can imagine. Notice the
+single quote =’=, signalling that the entire form is data, and need to
+be processed to create appropriate code when feed into some processing
+function.
+
+Now you see why Lisp code has a lot of parentheses. This is how
+*homoiconicity* differs. Without being able to treat code as data, you
+cannot bend the language to your own will (well, unless you implement
+your own language from scratch). Because Lisp's minimal syntax, you
+can create your own language for expressing your own ideas. Using your
+own language means you can use your own terms, your own rules, to
+write your solutions instead of someone imposes a particular style of
+language on you, tell you how to do it even if you prefer another
+style. This is why Lisp is so expressive: minimal syntax and follow
+the will of programmer.
+
+Lisp forms are classified into 3 types:
+
+- *Function form*:
+  Function form is the most common form. Function form is equivalent
+  to a function call in other languages. If the first element in the
+  list is a function that exists, that function will be called along
+  with its arguments. The remaining elements in the list are function
+  arguments. All arguments are evaluated before the function is called.
+
+  _Example_:
+
+  The list ~(+ 1 (+ 2 3) (* 3 4) (/ 4 2))~ is a function call to
+  function =+=. Nearly everything in Lisp is a function, even
+  arithmetic operators like =+=, =-=, =*=, =/=.  Before the outer most
+  list is processed, the inner ones will be processed first. =(+ 2 3)=
+  becomes 5, =(* 3 4)= becomes 12, =(/ 4 2)= becomes 2; all these
+  three values will then replace its list in the original function
+  call to make it become: ~(+ 1 5 12 2)~, and finally function =+= is
+  called to produce the final result 20.
+
+- *Special form*:
+  Special form has special evaluation rules or special syntax or
+  both. For example, this is =if..then..else= in Lisp:
+
+  #+begin_src emacs-lisp
+    (if condition  ;; condition is a valid Lisp form
+        ...do something if true...
+      ...do something if false...)
+  #+end_src
+
+  Let's consider the behaviour of =if=, not just in Lisp but in any
+  language: if condition (a valid Lisp form) is true, then do
+  something, else do something if false. For this reason, =if= cannot
+  be a function call because =condition=, =true= and =false= are all
+  evaluated and passed into if, while we want first check =condition=,
+  then depend on the outcome of =condition=, we select a true or false
+  branch.
+
+  Most forms in Lisp are functions, except special cases such as
+  =if=, =and=, =or=... that cannot follow the evaluation rule of a
+  function. They need their own rules that do not exist in other
+  forms. That's why they are special.
+
+- *Macro form*:
+  Macro form is a function, but different: When you call a macro, the
+  macro function generated regular Lisp code; the generated code then
+  is executed. Macro is what makes Lisp so special: it allows Lisp to
+  have any syntax anyone wishes for. The Python syntax enclosed in a
+  Lisp form you saw earlier is an example. But now, instead of having
+  to quote, you won't have to with a macro form. Instead of writing
+  like this:
+
+  #+begin_src emacs-lisp
+    '(if condition:
+         ...statements...
+      else:
+         ...statements...)
+  #+end_src
+
+You can remove the quote =’= and treat your Python syntax as part of
+Lisp:
+
+  #+begin_src emacs-lisp
+    (if condition:
+         ...statements...
+     else:
+         ...statements...)
+  #+end_src
+
+The Python code above is a macro form. Upon calling, the macro will
+first transform to a valid Lisp form:
+
+  #+begin_src emacs-lisp
+    (if condition
+         ...statements...
+         ...statements...)
+  #+end_src
+
+Then the transformed code is executed. You can have C for loop, Python if,
+Java class...mix up in Lisp if you want. Thanks to the minimal Lisp syntax,
+Lisp macro is able to do all of this. Without it, you cannot bend Lisp
+to your needs.
+
+In reality, =’(...)= is just a syntactic sugar for special form
+=(quote ...)=. In the end, aside from the atoms, Lisp only has one
+syntax: a pair of parentheses and items in it. With Lisp syntax, many
+things are easy to do in Lisp, such as generating code as data and
+execute it later, both in compile time and runtime. In the end, aside
+from the primitives, the only thing that exists in Lisp is a pair of
+parentheses, with things in in it: =(...)=. This is the only syntax,
+along with the semantics that depends on context: /a function form/,
+/a special form/ or /a macro form/; the first item in a form is going
+to get executed. That's all you need to remember for using any Lisp.
+
+If you are still not convinced with the parentheses, perhaps seasoned
+Lispers can:
+
+- [[http://symbo1ics.com/blog/?p%3D275][Lisp has too many parentheses…]]
+- The above article is inspired by [[https://groups.google.com/forum/#!msg/comp.lang.lisp/Nvdio3taI0Q/bn_VqLTaxG4J][this Usenet post]], which is worth reading.
+** Beyond parentheses
+:PROPERTIES:
+:ID:       e06ce975-464b-495e-8c40-88f62656a70a
+:END:
+You may ask, can you to create syntax without parentheses in Lisp? Of
+course, you can create entirely new syntax to extend Lisp without
+being enclosed inside the parentheses of Lisp, using reader
+macro. The difference between reader macro and macro:
+
+- A reader macro transforms raw text into valid Lisp objects. Reader
+  macro is a special type of macro that allows you to transform
+  non-Lisp code into Lisp code.
+- A regular macro transforms Lisp's list into valid Lisp code.
+
+For example, you can remove the parentheses with the Python
+=if..then..else= using a reader macro and use a non-parentheses Python
+=if..then..else= validly in your program. Using a regular macro, you
+have to keep the parentheses to make it a valid Lisp object: a list of
+symbols, then that list will be transformed at compile time. Lisp
+macro is advanced topic, and should really master the basics before
+getting to it.
+* Syntax error
+:PROPERTIES:
+:ID:       f81bda6e-00ea-47ee-8250-308ec8109f47
+:END:
+Lisp syntax is simple: it's just a pair of parentheses, with things in
+in it: =(...)=. If you encounter syntax errors, it belongs to these
+two cases:
+** Unbalanced parentheses:
+:PROPERTIES:
+:ID:       64829a4d-b80d-4bac-9941-f45367d7edc3
+:END:
+Do you miss an opening or closing parentheses, or do you insert
+unnecessary parentheses? Incorrect usage of parentheses is the only
+syntax error you get when writing Lisp program. In other languages,
+you have to remember many syntax rules. For example, to write a =for=
+in Tcl, you have to write like this to make it valid
+#+begin_src tcl
+  for {set i 0} {$i < $n} {incr i} {
+      ...do something...
+  }
+#+end_src
+I kept forgetting all the times when I first used it because I get
+used to C style for loop. In Tcl, to use some variables, you have to
+put a dollar sign =$= before the variable names. Howver, in some
+context, you must not insert dollar before:
+
+#+begin_src tcl
+  array set balloon {color red}
+  array get balloon
+#+end_src
+
+=balloon= is an array variable, but to use it you must not insert dollar
+sign before. It's annoying to remember trivial details like this.
+
+** Mini-language syntax error:
+:PROPERTIES:
+:ID:       e98cbd6b-60c8-447e-bf1d-e567b4d200c9
+:END:
+If you create a mini language, then you must follow its syntax
+rules. In this case, you get syntax errors like regular languages
+if you code is not correct according to syntax rules. However, if you
+are a beginner, you won't have to worry about macro and mini-languages
+at this stage.
+* Semantic error
+:PROPERTIES:
+:ID:       a36aca24-f1ba-4371-8e5e-12d545337e78
+:END:
+You might wonder, parentheses cannot be the only source of
+errors. What would happen when incorrect number of arguments passed
+into a function? Or non-existent variables, incorrect variable types,
+array index out of range...? These errors are called *semantic
+errors*. It has nothing to do with how statements are constructed.
+
+For example, this is syntax error:
+
+#+begin_src c
+  #include <stdio.h>
+
+  int main (int argc, const char* argv[]) {
+      if argc == 1 { exit(1) }
+      printf("Hello world")
+  }
+#+end_src
+
+In the above example, I made two syntax errors:
+
+- the condition in =if= statement is not surrounded by a pair of
+  parentheses. =if= statement in C requires this generic form:
+
+#+begin_src c
+  if (expression) {
+      ...statements separated by semicolon...
+  }
+#+end_src
+
+- missed a semicolon =;= at the end of =printf= statement.
+
+In contrast, this is semantic error:
+
+#+begin_src c
+  void add(int a, int b) {
+      return a + b;
+  }
+
+  void main(int argc, const char* argv[]) {
+      int a = 1;
+
+      add(a);
+      add(a,b);
+  }
+#+end_src
+
+The calls to =add= are syntactically correct, but used incorrectly:
+the first call to add requires one more argument; the second call to
+add contains non-existent variable.
+
+As in other languages, Lisp treats these errors as semantic errors,
+since syntax errors in Lisp have only to do with parentheses.
+
+* Lisp Machine
+:PROPERTIES:
+:ID:       b82bfb73-1af9-48d1-9565-0b8541e27487
+:END:
+It would be a mistake when mention about history of Lisp without
+mention about the Lisp Machine, a computing system that is built to
+run Lisp natively. In a Lisp Machine, the Operating System, device
+drivers and applications are written using a single language:
+Lisp. Such a thing is possible because the computer has a built-in
+hardware garbage collector, as opposed to the software implementations
+in garbage collected languages today.
+
+[[http://www.andromeda.com/people/ddyer/lisp/][A Brief History of Lisp Machines]]
+
+#+BEGIN_QUOTE
+*Why Lisp?*  Everyone "knows" that lisp was the language of choice for
+Artificial Intelligence research, but a big part of AI research is
+about paradigms for representing knowledge, expressing algorithms,
+man-machine communication, and machine-to-machine communication:  In
+short, how to use computers in general.  Lisp, as the default AI
+language, was also an important research vehicle for new computer
+languages, networking, display technology and so on.
+
+*Why Lisp Machines?*  The standard platform for Lisp before Lisp
+machines was a timeshared PDP-10, but it was well known that one Lisp
+program could turn a timeshared KL-10  into unusable sludge for
+everyone else.   It became technically feasible to build cheaper
+hardware that would run lisp better than on timeshared computers.  The
+technological push was definitely from the top down; to run big,
+resource hungry lisp programs more cheaply.  Lisp machines were not
+"personal" out of some desire make life pleasant for programmers, but
+simply because lisp would use 100% of whatever resources it had
+available. All code on these systems was written in Lisp simply
+because that was the easiest and most cost effective way to provide an
+operating system on this new hardware.
+
+*Why two different kinds?*  Quite a few groups with different goals were
+building high priced, high powered workstations at about the same
+time. All were capitalizing on Moore's law and the emerging consensus
+that bitmapped displays, windows,  mice, and networks were effective
+paradigms.   The C/Unix community spawned Sun, Apollo, and Silicon
+Graphics.  The Pascal Community spawned the PERQ.   There were two
+major branches in the Lisp family tree, Interlisp and Maclisp, so it
+should be no surprise that there were two main family branches in Lisp
+machines.
+
+Today, all this hardware and software are commercially extinct, but
+many features that were commercialized by lispms are present in every
+PC.
+#+END_QUOTE
+
+_Futher resources_:
+
+[[http://en.wikipedia.org/wiki/Genera_%2528operating_system%2529][Lisp OS: Genera]]: The OS is written entirely in Lisp, both the
+Operating System and the high-level applications.
+
+[[http://www.sts.tu-harburg.de/~r.f.moeller/symbolics-info/development-environment/index.html][The Lisp Machine Software Development Environment]]
+
+[[http://smbx.org/][Symbolic Lisp Machine Museum]]
+
+[[http://www.sts.tu-harburg.de/~r.f.moeller/symbolics-info/symbolics.html][Symbolics Lisp Machine Museum provided by Ralf Möller]]
+
+[[http://www.loper-os.org/?p%3D932][Kalman Reti, the Last Symbolics Developer, Speaks of Lisp Machines]]
+
+[[http://www.loper-os.org/?p%3D52][Secrets of the Symbolics Console: Part 1]]
+
+[[http://www.loper-os.org/?p%3D53][Secrets of the Symbolics Console: Part 2]]
+
+[[http://fare.tunes.org/LispM.html][A few things I know about LISP Machines]]
+
+[[http://dspace.mit.edu/handle/1721.1/5718][MIT's CADR machine]]
+
+* Conclusion
+:PROPERTIES:
+:ID:       125d8641-5327-4169-94c5-969e06d4bf69
+:END:
+You won't find any language with such a minimal syntax and uniformity,
+yet so expressive, since you can choose any language syntax that you
+want to solve your problems in. Some languages also have *homoiconic*
+property, but instead of using just a pair of parentheses, they use
+more complex syntax constructs. Some languages are simple (still not
+as much as Lisp), but are not *homoiconic*. The only syntax you write
+in Lisp, again, just a pair of parentheses, with things in
+in it: =(...)=. Because of syntax like this, Lisp requires you to
+careful match the parentheses. Or you can let Emacs does it for you.
+
+Learning any language has something in common:
+
+- Learn syntax and semantic.
+- Learn idiomatic ways of using the language.
+- Learn commonly used libraries.
+- Learn common development tools used with the language.
+
+We already covered the first. I will show you how to use common
+functions for configuration, and setup a programming environment for
+any Lisp in the next chapter.

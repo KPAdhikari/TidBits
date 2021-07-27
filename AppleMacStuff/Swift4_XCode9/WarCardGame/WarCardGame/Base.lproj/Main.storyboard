@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="s7O-yQ-tx7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Zk-WF-S7w">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="81H-J9-fKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="227.33333333333334"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="81H-J9-fKv" secondAttribute="height" multiplier="122:67" id="91d-bJ-vOK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pqw-R4-pO4">
+                                        <rect key="frame" x="0.0" y="227.33333333333337" width="414" height="265"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="bh8-5h-LDN">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="265"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bh8-5h-LDN" secondAttribute="height" multiplier="120:170" id="mFD-53-v0R"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="byS-TK-8B9">
+                                                <rect key="frame" x="227" y="0.0" width="187" height="265"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="byS-TK-8B9" secondAttribute="height" multiplier="120:170" id="5SI-jC-mQt"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKr-65-8pJ">
+                                        <rect key="frame" x="0.0" y="492.33333333333343" width="414" height="223.66666666666657"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Zk-WF-S7w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MpI-pq-HMj"/>
+                            <constraint firstItem="9Zk-WF-S7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vm6-N5-079"/>
+                            <constraint firstItem="s7O-yQ-tx7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yzt-b6-vPP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Zk-WF-S7w" secondAttribute="trailing" id="afW-xY-dT1"/>
+                            <constraint firstItem="s7O-yQ-tx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h3q-2k-CwQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Zk-WF-S7w" secondAttribute="bottom" id="skN-YV-rMS"/>
+                            <constraint firstAttribute="trailing" secondItem="s7O-yQ-tx7" secondAttribute="trailing" id="uHm-Jf-Po4"/>
+                            <constraint firstAttribute="bottom" secondItem="s7O-yQ-tx7" secondAttribute="bottom" id="ua2-nc-kPT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="666" height="621"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
