@@ -7,35 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		981E6EA426C4BBAF00F8BC68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E6EA326C4BBAF00F8BC68 /* DetailView.swift */; };
-		981E6EA626C59DFA00F8BC68 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E6EA526C59DFA00F8BC68 /* EditView.swift */; };
-		9856985226C338280041DE34 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856985126C338280041DE34 /* Color+Codable.swift */; };
-		9856985426C391870041DE34 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856985326C391860041DE34 /* ScrumsView.swift */; };
-		98D67CBD26C1C5C400093A72 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D67CBC26C1C5C400093A72 /* ScrumdingerApp.swift */; };
-		98D67CBF26C1C5C400093A72 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D67CBE26C1C5C400093A72 /* MeetingView.swift */; };
-		98D67CC126C1C5D200093A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D67CC026C1C5D200093A72 /* Assets.xcassets */; };
-		98D67CC426C1C5D200093A72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D67CC326C1C5D200093A72 /* Preview Assets.xcassets */; };
-		98D67CCC26C22F9B00093A72 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D67CCB26C22F9B00093A72 /* DailyScrum.swift */; };
-		98D67CCE26C23CDC00093A72 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D67CCD26C23CDC00093A72 /* CardView.swift */; };
+		9827A38226CC2858007ACB06 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827A38126CC2858007ACB06 /* Weather.swift */; };
+		9827A38426CCBE1E007ACB06 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9827A38326CCBE1E007ACB06 /* WeatherViewModel.swift */; };
+		983BDEEA26CB7FD900265A71 /* WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983BDEE926CB7FD900265A71 /* WeatherApp.swift */; };
+		983BDEEC26CB7FD900265A71 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983BDEEB26CB7FD900265A71 /* WeatherView.swift */; };
+		983BDEEE26CB7FE100265A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983BDEED26CB7FE100265A71 /* Assets.xcassets */; };
+		983BDEF126CB7FE200265A71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 983BDEF026CB7FE200265A71 /* Preview Assets.xcassets */; };
+		983BDEF926CB82DD00265A71 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983BDEF826CB82DD00265A71 /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		981E6EA326C4BBAF00F8BC68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		981E6EA526C59DFA00F8BC68 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
-		9856985126C338280041DE34 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
-		9856985326C391860041DE34 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
-		98D67CB926C1C5C400093A72 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		98D67CBC26C1C5C400093A72 /* ScrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerApp.swift; sourceTree = "<group>"; };
-		98D67CBE26C1C5C400093A72 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
-		98D67CC026C1C5D200093A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		98D67CC326C1C5D200093A72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		98D67CC526C1C5D200093A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98D67CCB26C22F9B00093A72 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
-		98D67CCD26C23CDC00093A72 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9827A38126CC2858007ACB06 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		9827A38326CCBE1E007ACB06 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		983BDEE626CB7FD900265A71 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		983BDEE926CB7FD900265A71 /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
+		983BDEEB26CB7FD900265A71 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		983BDEED26CB7FE100265A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		983BDEF026CB7FE200265A71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		983BDEF226CB7FE200265A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		983BDEF826CB82DD00265A71 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		98D67CB626C1C5C400093A72 /* Frameworks */ = {
+		983BDEE326CB7FD900265A71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,44 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		98D67CB026C1C5C400093A72 = {
+		983BDEDD26CB7FD900265A71 = {
 			isa = PBXGroup;
 			children = (
-				98D67CBB26C1C5C400093A72 /* Scrumdinger */,
-				98D67CBA26C1C5C400093A72 /* Products */,
+				983BDEE826CB7FD900265A71 /* Weather */,
+				983BDEE726CB7FD900265A71 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		98D67CBA26C1C5C400093A72 /* Products */ = {
+		983BDEE726CB7FD900265A71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98D67CB926C1C5C400093A72 /* Scrumdinger.app */,
+				983BDEE626CB7FD900265A71 /* Weather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98D67CBB26C1C5C400093A72 /* Scrumdinger */ = {
+		983BDEE826CB7FD900265A71 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				98D67CBC26C1C5C400093A72 /* ScrumdingerApp.swift */,
-				98D67CBE26C1C5C400093A72 /* MeetingView.swift */,
-				98D67CCB26C22F9B00093A72 /* DailyScrum.swift */,
-				98D67CCD26C23CDC00093A72 /* CardView.swift */,
-				98D67CC026C1C5D200093A72 /* Assets.xcassets */,
-				98D67CC526C1C5D200093A72 /* Info.plist */,
-				98D67CC226C1C5D200093A72 /* Preview Content */,
-				9856985126C338280041DE34 /* Color+Codable.swift */,
-				9856985326C391860041DE34 /* ScrumsView.swift */,
-				981E6EA326C4BBAF00F8BC68 /* DetailView.swift */,
-				981E6EA526C59DFA00F8BC68 /* EditView.swift */,
+				983BDEE926CB7FD900265A71 /* WeatherApp.swift */,
+				983BDEEB26CB7FD900265A71 /* WeatherView.swift */,
+				983BDEF826CB82DD00265A71 /* WeatherService.swift */,
+				983BDEED26CB7FE100265A71 /* Assets.xcassets */,
+				983BDEF226CB7FE200265A71 /* Info.plist */,
+				9827A38126CC2858007ACB06 /* Weather.swift */,
+				983BDEEF26CB7FE200265A71 /* Preview Content */,
+				9827A38326CCBE1E007ACB06 /* WeatherViewModel.swift */,
 			);
-			path = Scrumdinger;
+			path = Weather;
 			sourceTree = "<group>";
 		};
-		98D67CC226C1C5D200093A72 /* Preview Content */ = {
+		983BDEEF26CB7FE200265A71 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				98D67CC326C1C5D200093A72 /* Preview Assets.xcassets */,
+				983BDEF026CB7FE200265A71 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -90,38 +81,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		98D67CB826C1C5C400093A72 /* Scrumdinger */ = {
+		983BDEE526CB7FD900265A71 /* Weather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98D67CC826C1C5D200093A72 /* Build configuration list for PBXNativeTarget "Scrumdinger" */;
+			buildConfigurationList = 983BDEF526CB7FE200265A71 /* Build configuration list for PBXNativeTarget "Weather" */;
 			buildPhases = (
-				98D67CB526C1C5C400093A72 /* Sources */,
-				98D67CB626C1C5C400093A72 /* Frameworks */,
-				98D67CB726C1C5C400093A72 /* Resources */,
+				983BDEE226CB7FD900265A71 /* Sources */,
+				983BDEE326CB7FD900265A71 /* Frameworks */,
+				983BDEE426CB7FD900265A71 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Scrumdinger;
-			productName = Scrumdinger;
-			productReference = 98D67CB926C1C5C400093A72 /* Scrumdinger.app */;
+			name = Weather;
+			productName = Weather;
+			productReference = 983BDEE626CB7FD900265A71 /* Weather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		98D67CB126C1C5C400093A72 /* Project object */ = {
+		983BDEDE26CB7FD900265A71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					98D67CB826C1C5C400093A72 = {
+					983BDEE526CB7FD900265A71 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 98D67CB426C1C5C400093A72 /* Build configuration list for PBXProject "Scrumdinger" */;
+			buildConfigurationList = 983BDEE126CB7FD900265A71 /* Build configuration list for PBXProject "Weather" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,48 +120,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 98D67CB026C1C5C400093A72;
-			productRefGroup = 98D67CBA26C1C5C400093A72 /* Products */;
+			mainGroup = 983BDEDD26CB7FD900265A71;
+			productRefGroup = 983BDEE726CB7FD900265A71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98D67CB826C1C5C400093A72 /* Scrumdinger */,
+				983BDEE526CB7FD900265A71 /* Weather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		98D67CB726C1C5C400093A72 /* Resources */ = {
+		983BDEE426CB7FD900265A71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98D67CC426C1C5D200093A72 /* Preview Assets.xcassets in Resources */,
-				98D67CC126C1C5D200093A72 /* Assets.xcassets in Resources */,
+				983BDEF126CB7FE200265A71 /* Preview Assets.xcassets in Resources */,
+				983BDEEE26CB7FE100265A71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		98D67CB526C1C5C400093A72 /* Sources */ = {
+		983BDEE226CB7FD900265A71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9856985226C338280041DE34 /* Color+Codable.swift in Sources */,
-				9856985426C391870041DE34 /* ScrumsView.swift in Sources */,
-				981E6EA626C59DFA00F8BC68 /* EditView.swift in Sources */,
-				98D67CBF26C1C5C400093A72 /* MeetingView.swift in Sources */,
-				981E6EA426C4BBAF00F8BC68 /* DetailView.swift in Sources */,
-				98D67CCC26C22F9B00093A72 /* DailyScrum.swift in Sources */,
-				98D67CCE26C23CDC00093A72 /* CardView.swift in Sources */,
-				98D67CBD26C1C5C400093A72 /* ScrumdingerApp.swift in Sources */,
+				9827A38426CCBE1E007ACB06 /* WeatherViewModel.swift in Sources */,
+				9827A38226CC2858007ACB06 /* Weather.swift in Sources */,
+				983BDEEC26CB7FD900265A71 /* WeatherView.swift in Sources */,
+				983BDEF926CB82DD00265A71 /* WeatherService.swift in Sources */,
+				983BDEEA26CB7FD900265A71 /* WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		98D67CC626C1C5D200093A72 /* Debug */ = {
+		983BDEF326CB7FE200265A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +219,7 @@
 			};
 			name = Debug;
 		};
-		98D67CC726C1C5D200093A72 /* Release */ = {
+		983BDEF426CB7FE200265A71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,44 +274,44 @@
 			};
 			name = Release;
 		};
-		98D67CC926C1C5D200093A72 /* Debug */ = {
+		983BDEF626CB7FE200265A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = GA9RS8PG4M;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Scrumdinger/Info.plist;
+				INFOPLIST_FILE = Weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.KrishnaAdhikari.Scrumdinger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KrishnaAdhikari.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		98D67CCA26C1C5D200093A72 /* Release */ = {
+		983BDEF726CB7FE200265A71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = GA9RS8PG4M;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Scrumdinger/Info.plist;
+				INFOPLIST_FILE = Weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.KrishnaAdhikari.Scrumdinger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.KrishnaAdhikari.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,25 +321,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98D67CB426C1C5C400093A72 /* Build configuration list for PBXProject "Scrumdinger" */ = {
+		983BDEE126CB7FD900265A71 /* Build configuration list for PBXProject "Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98D67CC626C1C5D200093A72 /* Debug */,
-				98D67CC726C1C5D200093A72 /* Release */,
+				983BDEF326CB7FE200265A71 /* Debug */,
+				983BDEF426CB7FE200265A71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98D67CC826C1C5D200093A72 /* Build configuration list for PBXNativeTarget "Scrumdinger" */ = {
+		983BDEF526CB7FE200265A71 /* Build configuration list for PBXNativeTarget "Weather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98D67CC926C1C5D200093A72 /* Debug */,
-				98D67CCA26C1C5D200093A72 /* Release */,
+				983BDEF626CB7FE200265A71 /* Debug */,
+				983BDEF726CB7FE200265A71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 98D67CB126C1C5C400093A72 /* Project object */;
+	rootObject = 983BDEDE26CB7FD900265A71 /* Project object */;
 }
