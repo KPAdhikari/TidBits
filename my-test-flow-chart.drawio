@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-22T14:38:27.078Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="psPGmiSH2h_Cs81VO5Pc" version="21.0.10" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-22T14:47:33.879Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="zyLhMVv4vbsB0OjFIpxI" version="21.0.10" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1084" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1338" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -18,6 +18,11 @@
           <mxGeometry y="20" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="190" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="990" y="205" />
+              <mxPoint x="990" y="250" />
+              <mxPoint x="1050" y="250" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="WIyWlLk6GJQsqaUBKTNV-7" edge="1">
@@ -42,7 +47,7 @@
             <mxPoint as="offset" />
             <mxPoint x="190" y="310" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="640" y="270" />
+              <mxPoint x="890" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -51,8 +56,7 @@
             <mxPoint as="offset" />
             <mxPoint x="190" y="330" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="970" y="270" />
-              <mxPoint x="1420" y="270" />
+              <mxPoint x="1580" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -63,38 +67,42 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-11" target="onWVqciRnPXN7YNmYVlH-30">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1240" y="430" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-11" value="&lt;b&gt;&lt;font style=&quot;&quot;&gt;&lt;font color=&quot;#0000ff&quot; style=&quot;font-size: 17px;&quot;&gt;Classical Machine Learning&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#006633&quot; style=&quot;font-size: 13px;&quot;&gt;ML without Neural Networks&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="500" y="370" width="250" height="60" as="geometry" />
+          <mxGeometry x="875" y="400" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-12" target="onWVqciRnPXN7YNmYVlH-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-12" value="&lt;b&gt;&lt;font style=&quot;color: rgb(0, 0, 255); font-size: 16px;&quot;&gt;Deep Learning (DL)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#006600&quot; style=&quot;font-size: 12px;&quot;&gt;ML with (Deep) Neural Networks&lt;/font&gt;&lt;br&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1320" y="310" width="190" height="60" as="geometry" />
+          <mxGeometry x="1490" y="425" width="190" height="60" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-0" value="Inference Engines" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1580" y="350" width="110" height="40" as="geometry" />
+          <mxGeometry x="1610" y="350" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endSize=0;endArrow=none;endFill=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="onWVqciRnPXN7YNmYVlH-2" target="WIyWlLk6GJQsqaUBKTNV-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2000" y="320" />
+              <mxPoint x="1930" y="320" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-2" value="Knowledge Base" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1950" y="350" width="100" height="40" as="geometry" />
+          <mxGeometry x="1890" y="350" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-7" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Machine Learning (ML)&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="760" y="250" width="210" height="40" as="geometry" />
+          <mxGeometry x="945" y="290" width="210" height="40" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-11" value="&lt;table style=&quot;border: 1px solid rgb(0, 0, 204); border-collapse: collapse;&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;border-collapse: collapse;&quot; border=&quot;1&quot;&gt;Deep Neural Network (DNN)&lt;/td&gt;&lt;td&gt;Recurrent&amp;nbsp; Neural Network (RNN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-collapse: collapse;&quot; border=&quot;1&quot;&gt;Convolutional Neural Network (CNN)&lt;/td&gt;&lt;td&gt;Long Short-Term Memory (LSTM)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-collapse: collapse;&quot; border=&quot;1&quot;&gt;Restricted Boltzmann Machine (RBM)&lt;/td&gt;&lt;td&gt;Deep Belief Network (DBN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-collapse: collapse;&quot; border=&quot;1&quot;&gt;Sparse Autoencoder (SAE)&lt;/td&gt;&lt;td&gt;Hybrid&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1210" y="420" width="410" height="120" as="geometry" />
+          <mxGeometry x="1480" y="585" width="410" height="120" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-26" value="Semi-supervised" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="565" y="450" width="120" height="30" as="geometry" />
+          <mxGeometry x="940" y="490" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="onWVqciRnPXN7YNmYVlH-28" target="onWVqciRnPXN7YNmYVlH-47">
           <mxGeometry relative="1" as="geometry" />
@@ -103,13 +111,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-28" value="Supervised" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="360" y="510" width="120" height="40" as="geometry" />
+          <mxGeometry x="720" y="550" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="onWVqciRnPXN7YNmYVlH-30" target="onWVqciRnPXN7YNmYVlH-38">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="945" y="480" />
-              <mxPoint x="945" y="480" />
+              <mxPoint x="1245" y="500" />
+              <mxPoint x="1245" y="500" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -117,31 +125,31 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-30" value="Unsupervised" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="900" y="440" width="120" height="30" as="geometry" />
+          <mxGeometry x="1200" y="460" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="onWVqciRnPXN7YNmYVlH-38" target="onWVqciRnPXN7YNmYVlH-43">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-38" value="Dimension(ality) Reduction" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="870" y="500" width="150" height="30" as="geometry" />
+          <mxGeometry x="1170" y="520" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-40" value="Clustering" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1050" y="490" width="120" height="40" as="geometry" />
+          <mxGeometry x="1350" y="510" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-43" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Logistical Analysis of Data (LAD&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Principal Component Analysis (PCA)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="880" y="560" width="220" height="60" as="geometry" />
+          <mxGeometry x="1180" y="580" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="onWVqciRnPXN7YNmYVlH-47" target="onWVqciRnPXN7YNmYVlH-53">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-47" value="Classification" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="360" y="585" width="120" height="35" as="geometry" />
+          <mxGeometry x="720" y="625" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-51" value="Regression" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="565" y="520" width="120" height="60" as="geometry" />
+          <mxGeometry x="925" y="560" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="onWVqciRnPXN7YNmYVlH-53" value="&lt;table align=&quot;left&quot; style=&quot;border: 1px solid rgb(0, 0, 153); border-collapse: collapse;&quot; border=&quot;1&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Random Forrests&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Decision Tree&lt;/blockquote&gt;&lt;/td&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Hidden Markov Models (HMM)&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Support Vector Machine (SVM)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K-Nearest Neighbors (KNN)&lt;/td&gt;&lt;td&gt;Gaussian Naive Bayes&lt;/td&gt;&lt;td&gt;Logistic Regression&lt;/td&gt;&lt;td&gt;Gradient Boosted Machines (GBM)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="100" y="687.5" width="680" height="60" as="geometry" />
+          <mxGeometry x="720" y="727.5" width="680" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
